@@ -220,3 +220,30 @@
     transform: scale(1.05);
   }
 }
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.header-anim {
+  animation: fadeInDown 0.5s ease-out forwards;
+}
+
+.header-anim-delay-1 {
+  animation-delay: 0.1s;
+}
+
+.header-anim-delay-2 {
+  animation-delay: 0.2s;
+}
+
+.header-anim-delay-3 {
+  animation-delay: 0.3s;
+}

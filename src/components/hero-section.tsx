@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export function HeroSection() {
   return (
-    <section className="relative py-20 overflow-hidden">
+    <section className="relative pt-32 pb-20 overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute left-0 top-20 -translate-x-1/2 w-96 h-96 rounded-full bg-gradient-to-br from-violet-800/30 to-purple-900/30 blur-3xl opacity-60 animate-pulse"></div>
       <div className="absolute right-10 bottom-0 w-80 h-80 rounded-full bg-gradient-to-br from-indigo-700/30 to-blue-800/30 blur-3xl opacity-60 animate-pulse" style={{ animationDelay: "2s" }}></div>
@@ -59,45 +59,62 @@ export function HeroSection() {
           
           <div className="relative">
             <div className="absolute inset-0 flex items-center justify-center">
-              <div className="w-56 h-56 rounded-full bg-indigo-600/30 blur-3xl animate-pulse"></div>
-              <div className="absolute w-32 h-32 rounded-full bg-violet-600/30 blur-3xl animate-pulse" style={{ animationDelay: "1.5s" }}></div>
+              <div className="w-72 h-72 rounded-full bg-indigo-600/30 blur-3xl animate-pulse"></div>
+              <div className="absolute w-48 h-48 rounded-full bg-violet-600/30 blur-3xl animate-pulse" style={{ animationDelay: "1.5s" }}></div>
             </div>
             
             <div className="relative flex justify-center animate-float">
-              {/* Device frame with realistic Education app UI */}
-              <div className="relative transform rotate-[15deg] shadow-2xl">
+              {/* Education app UI */}
+              <div className="relative transform rotate-[12deg] hover:rotate-[8deg] transition-transform duration-700">
                 <Image 
                   src="/hero correct.png" 
                   alt="Education App Interface" 
-                  width={300} 
-                  height={600}
-                  className="rounded-[40px] object-cover border-8 border-[#1a1a2d] z-10 relative"
+                  width={380} 
+                  height={700}
+                  className="rounded-[26px] object-contain z-10 relative hover:scale-105 transition-all duration-700"
+                  style={{ 
+                    filter: "drop-shadow(0 25px 25px rgba(0,0,0,0.15))",
+                    maxHeight: "75vh"
+                  }}
+                  priority
                 />
                 
-                {/* Add reflections and highlights for realistic effect */}
-                <div className="absolute inset-0 rounded-[40px] bg-gradient-to-tr from-transparent via-white/5 to-white/10 z-20 pointer-events-none border-8 border-[#1a1a2d]"></div>
+                {/* Subtle glass effect overlay */}
+                <div className="absolute inset-0 rounded-[26px] bg-gradient-to-tr from-transparent via-white/5 to-white/10 z-20 pointer-events-none"></div>
               </div>
               
               {/* Floating UI cards */}
-              <div className="absolute top-10 -left-12 animate-float" style={{ animationDelay: "1s" }}>
-                <div className="glassmorphism w-28 p-3">
+              <div className="absolute top-5 -left-16 animate-float" style={{ animationDelay: "1s" }}>
+                <div className="glassmorphism w-32 p-3 rounded-xl backdrop-blur-md">
+                  <div className="flex items-center gap-2 mb-2">
+                    <div className="h-3 w-3 rounded-full bg-indigo-400/80"></div>
+                    <div className="h-2 w-16 bg-indigo-300/30 rounded"></div>
+                  </div>
                   <div className="h-2 w-full bg-indigo-200/20 rounded mb-2"></div>
                   <div className="h-2 w-2/3 bg-indigo-200/20 rounded"></div>
                 </div>
               </div>
               
-              <div className="absolute bottom-20 -right-14 animate-float" style={{ animationDelay: "2s" }}>
-                <div className="glassmorphism w-32 p-3">
-                  <div className="h-8 w-8 rounded-lg bg-indigo-400/20 mb-2"></div>
+              <div className="absolute bottom-16 -right-14 animate-float" style={{ animationDelay: "2s" }}>
+                <div className="glassmorphism w-36 p-3 rounded-xl backdrop-blur-md">
+                  <div className="h-8 w-8 rounded-lg bg-violet-400/20 mb-2 flex items-center justify-center">
+                    <div className="h-4 w-4 rounded-sm bg-violet-300/40"></div>
+                  </div>
                   <div className="h-2 w-full bg-indigo-200/20 rounded mb-2"></div>
-                  <div className="h-2 w-2/3 bg-indigo-200/20 rounded"></div>
+                  <div className="h-2 w-3/4 bg-indigo-200/20 rounded"></div>
                 </div>
               </div>
 
-              {/* Extra floating element for visual interest */}
-              <div className="absolute top-1/2 -right-8 transform -translate-y-1/2 animate-float" style={{ animationDelay: "1.5s" }}>
-                <div className="w-8 h-8 rounded-full bg-indigo-500/30 flex items-center justify-center">
-                  <div className="w-4 h-4 rounded-full bg-indigo-400/50"></div>
+              {/* Extra floating elements */}
+              <div className="absolute top-1/3 -right-10 transform -translate-y-1/2 animate-float" style={{ animationDelay: "1.5s" }}>
+                <div className="w-10 h-10 rounded-full bg-indigo-500/20 backdrop-blur-sm flex items-center justify-center">
+                  <div className="w-5 h-5 rounded-full bg-indigo-400/40"></div>
+                </div>
+              </div>
+              
+              <div className="absolute bottom-1/4 -left-8 animate-float" style={{ animationDelay: "2.5s" }}>
+                <div className="w-8 h-8 rounded-full bg-violet-500/20 backdrop-blur-sm flex items-center justify-center">
+                  <div className="w-4 h-4 rounded-full bg-violet-400/40"></div>
                 </div>
               </div>
             </div>
