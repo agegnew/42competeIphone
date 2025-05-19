@@ -77,7 +77,7 @@ export function Footer() {
                 </button>
               </div>
               <p className="mt-3 text-xs text-indigo-100/50">
-                We'll never share your details. See our <Link href="#" className="text-indigo-300 hover:underline">Privacy Policy</Link>
+                We&apos;ll never share your details. See our <Link href="#" className="text-indigo-300 hover:underline">Privacy Policy</Link>
               </p>
             </div>
           </div>

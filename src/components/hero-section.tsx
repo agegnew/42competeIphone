@@ -25,7 +25,7 @@ export function HeroSection() {
             </div>
             
             <p className="text-lg text-indigo-100/80 font-light max-w-lg animate-hero-fadein delay-150">
-              Redefine what's possible with our innovative mobile app. 
+              Redefine what&apos;s possible with our innovative mobile app. 
               Beautiful interface, powerful features, and intuitive experience.
             </p>
             
